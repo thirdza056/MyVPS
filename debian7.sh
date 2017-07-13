@@ -258,174 +258,174 @@ cd
 
 # instal UPDATE SCRIPT
 cd
-wget https://github.com/ibnufachrizal/sshaiopremium/tree/master/config/update
+wget https://raw.githubusercontent.com/ibnufachrizal/sshaiopremium/master/config/update
 mv ./update /usr/bin/update
 chmod +x /usr/bin/update
 
 # instal Buat Akun SSH/OpenVPN
 cd
-wget https://github.com/ibnufachrizal/sshaiopremium/tree/master/config/buatakun
+wget https://raw.githubusercontent.com/ibnufachrizal/sshaiopremium/master/config/buatakun
 mv ./buatakun /usr/bin/buatakun
 chmod +x /usr/bin/buatakun
 
 # instal Generate Akun SSH/OpenVPN
 cd
-wget https://github.com/ibnufachrizal/sshaiopremium/tree/master/config/generate
+wget https://raw.githubusercontent.com/ibnufachrizal/sshaiopremium/master/config/generate
 mv ./generate /usr/bin/generate
 chmod +x /usr/bin/generate
 
 # instal Generate Akun Trial
 cd
-wget https://github.com/ibnufachrizal/sshaiopremium/tree/master/config/trial
+wget https://raw.githubusercontent.com/ibnufachrizal/sshaiopremium/master/config/trial
 mv ./trial /usr/bin/trial
 chmod +x /usr/bin/trial
 
 # instal  Ganti Password Akun SSH/VPN
 cd
-wget https://github.com/ibnufachrizal/sshaiopremium/tree/master/config/userpass
+wget https://raw.githubusercontent.com/ibnufachrizal/sshaiopremium/master/config/userpass
 mv ./userpass /usr/bin/userpass
 chmod +x /usr/bin/userpass
 
 # instal Generate Akun SSH/OpenVPN
 cd
-wget https://github.com/ibnufachrizal/sshaiopremium/tree/master/config/userrenew
+wget https://raw.githubusercontent.com/ibnufachrizal/sshaiopremium/master/config/userrenew
 mv ./userrenew /usr/bin/userrenew
 chmod +x /usr/bin/userrenew
 
 # instal Hapus Akun SSH/OpenVPN
 cd
-wget https://github.com/ibnufachrizal/sshaiopremium/tree/master/config/userdelete
+wget https://raw.githubusercontent.com/ibnufachrizal/sshaiopremium/master/config/userdelete
 mv ./userdelete /usr/bin/userdelete
 chmod +x /usr/bin/userdelete
 
 # instal Cek Login Dropbear & OpenSSH
 cd
-wget https://github.com/ibnufachrizal/sshaiopremium/tree/master/config/userlogin
+wget https://raw.githubusercontent.com/ibnufachrizal/sshaiopremium/master/config/userlogin
 mv ./userlogin /usr/bin/userlogin
 chmod +x /usr/bin/userlogin
 
 # instal Cek Login Dropbear, OpenSSH & OpenVPN
 cd
-wget https://github.com/ibnufachrizal/sshaiopremium/tree/master/config/userlogin
+wget https://raw.githubusercontent.com/ibnufachrizal/sshaiopremium/master/config/userlogin
 mv ./userlogin /usr/bin/userlogin
 chmod +x /usr/bin/userlogin
 
 # instal Auto Limit Multi Login
 cd
-wget https://github.com/ibnufachrizal/sshaiopremium/tree/master/config/autolimit
+wget https://raw.githubusercontent.com/ibnufachrizal/sshaiopremium/master/config/autolimit
 mv ./autolimit /usr/bin/autolimit
 chmod +x /usr/bin/autolimit
 
 # instal Auto Limit Script Multi Login
 cd
-wget https://github.com/ibnufachrizal/sshaiopremium/tree/master/config/auto-limit-script
+wget https://raw.githubusercontent.com/ibnufachrizal/sshaiopremium/master/config/auto-limit-script
 mv ./auto-limit-script /usr/bin/auto-limit-script
 chmod +x /usr/bin/auto-limit-script
 
 # instal Melihat detail user SSH & OpenVPN 
 cd
-wget https://github.com/ibnufachrizal/sshaiopremium/tree/master/config/userdetail
+wget https://raw.githubusercontent.com/ibnufachrizal/sshaiopremium/master/config/userdetail
 mv ./userdetail /usr/bin/userdetail
 chmod +x /usr/bin/userdetail
 
 # instal Delete Akun Expire
 cd
-wget https://github.com/ibnufachrizal/sshaiopremium/tree/master/config/deleteuserexpire
+wget https://raw.githubusercontent.com/ibnufachrizal/sshaiopremium/master/config/deleteuserexpire
 mv ./deleteuserexpire /usr/bin/deleteuserexpire
 chmod +x /usr/bin/deleteuserexpire
 
 # instal  Kill Multi Login
 cd
-wget https://github.com/ibnufachrizal/sshaiopremium/tree/master/config/autokilluser
+wget https://raw.githubusercontent.com/ibnufachrizal/sshaiopremium/master/config/autokilluser
 mv ./autokilluser /usr/bin/autokilluser
 chmod +x /usr/bin/autokilluser
 
 # instal Auto Banned Akun
 cd
-wget https://github.com/ibnufachrizal/sshaiopremium/tree/master/config/userban
+wget https://raw.githubusercontent.com/ibnufachrizal/sshaiopremium/master/config/userban
 mv ./userban /usr/bin/userban
 chmod +x /usr/bin/userban
 
 # instal Unbanned Akun
 cd
-wget https://github.com/ibnufachrizal/sshaiopremium/tree/master/config/userunban
+wget https://raw.githubusercontent.com/ibnufachrizal/sshaiopremium/master/config/userunban
 mv ./userunban /usr/bin/userunban
 chmod +x /usr/bin/userunban
 
 # instal Mengunci Akun SSH & OpenVPN
 cd
-wget https://github.com/ibnufachrizal/sshaiopremium/tree/master/config/userlock
+wget https://raw.githubusercontent.com/ibnufachrizal/sshaiopremium/master/config/userlock
 mv ./userlock /usr/bin/userlock
 chmod +x /usr/bin/userlock
 
 # instal Membuka user SSH & OpenVPN yang terkunci
 cd
-wget https://github.com/ibnufachrizal/sshaiopremium/tree/master/config/userunlock
+wget https://raw.githubusercontent.com/ibnufachrizal/sshaiopremium/master/config/userunlock
 mv ./userunlock /usr/bin/userunlock
 chmod +x /usr/bin/userunlock
 
 # instal Melihat daftar user yang terkick oleh perintah user-limit
 cd
-wget https://github.com/ibnufachrizal/sshaiopremium/tree/master/config/loglimit
+wget https://raw.githubusercontent.com/ibnufachrizal/sshaiopremium/master/config/loglimit
 mv ./loglimit /usr/bin/loglimit
 chmod +x /usr/bin/loglimit
 
 # instal Melihat daftar user yang terbanned oleh perintah user-ban
 cd
-wget https://github.com/ibnufachrizal/sshaiopremium/tree/master/config/logban
+wget https://raw.githubusercontent.com/ibnufachrizal/sshaiopremium/master/config/logban
 mv ./logban /usr/bin/logban
 chmod +x /usr/bin/logban
 
 # instal Buat Akun PPTP VPN
 cd
-wget https://github.com/ibnufachrizal/sshaiopremium/tree/master/config/useraddpptp
+wget https://raw.githubusercontent.com/ibnufachrizal/sshaiopremium/master/config/useraddpptp
 mv ./useraddpptp /usr/bin/useraddpptp
 chmod +x /usr/bin/useraddpptp
 
 # instal Hapus Akun PPTP VPN
 cd
-wget https://github.com/ibnufachrizal/sshaiopremium/tree/master/config/userdeletepptp
+wget https://raw.githubusercontent.com/ibnufachrizal/sshaiopremium/master/config/userdeletepptp
 mv ./userdeletepptp /usr/bin/userdeletepptp
 chmod +x /usr/bin/userdeletepptp
 
 # instal Lihat Detail Akun PPTP VPN
 cd
-wget https://github.com/ibnufachrizal/sshaiopremium/tree/master/config/detailpptp
+wget https://raw.githubusercontent.com/ibnufachrizal/sshaiopremium/master/config/detailpptp
 mv ./detailpptp /usr/bin/detailpptp
 chmod +x /usr/bin/detailpptp
 
 # instal Cek login PPTP VPN
 cd
-wget https://github.com/ibnufachrizal/sshaiopremium/tree/master/config/userloginpptp
+wget https://raw.githubusercontent.com/ibnufachrizal/sshaiopremium/master/config/userloginpptp
 mv ./userloginpptp /usr/bin/userloginpptp
 chmod +x /usr/bin/userloginpptp
 
 # instal Lihat Daftar User PPTP VPN
 cd
-wget https://github.com/ibnufachrizal/sshaiopremium/tree/master/config/alluserpptp
+wget https://raw.githubusercontent.com/ibnufachrizal/sshaiopremium/master/config/alluserpptp
 mv ./alluserpptp /usr/bin/alluserpptp
 chmod +x /usr/bin/alluserpptp
 
 # instal Set Auto Reboot
 cd
-wget https://github.com/ibnufachrizal/sshaiopremium/tree/master/config/autoreboot
+wget https://raw.githubusercontent.com/ibnufachrizal/sshaiopremium/master/config/autoreboot
 mv ./autoreboot /usr/bin/autoreboot
 chmod +x /usr/bin/autoreboot
 
 # Install SPEED tES
 apt-get install python
-wget https://github.com/ibnufachrizal/sshaiopremium/tree/master/config/speedtest.py
+wget https://raw.githubusercontent.com/ibnufachrizal/sshaiopremium/master/config/speedtest.py
 chmod +x speedtest.py
 
 # instal autolimitscript
 cd
-wget https://github.com/ibnufachrizal/sshaiopremium/tree/master/config/auto-limit-script
+wget https://raw.githubusercontent.com/ibnufachrizal/sshaiopremium/master/config/auto-limit-script
 mv ./auto-limit-script /usr/bin/auto-limit-script
 chmod +x /usr/bin/auto-limit-script
 
 # instal userdelete
 cd
-wget https://github.com/ibnufachrizal/sshaiopremium/tree/master/config/userdelete
+wget https://raw.githubusercontent.com/ibnufachrizal/sshaiopremium/master/config/userdelete
 mv ./userdelete /usr/bin/userdelete
 chmod +x /usr/bin/userdelete
 
@@ -438,7 +438,7 @@ chmod +x /usr/local/bin/menu
 # download script
 cd
 wget -O user-expired.sh "https://raw.githubusercontent.com/ForNesiaFreak/FNS_Debian7/fornesia.com/freak/user-expired.sh"
-wget -O /etc/issue.net "https://github.com/ibnufachrizal/sshaiopremium/tree/master/config/banner"
+wget -O /etc/issue.net "https://raw.githubusercontent.com/ibnufachrizal/sshaiopremium/master/config/banner"
 echo "0 0 * * * root /root/user-expired.sh" > /etc/cron.d/user-expired
 echo "0 0 * * * root /sbin/reboot" > /etc/cron.d/reboot
 echo "* * * * * service dropbear restart" > /etc/cron.d/dropbear
