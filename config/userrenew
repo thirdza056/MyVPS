@@ -1,5 +1,5 @@
             user-list
-			#!/bin/bash
+            #!/bin/bash
             # Created by http://www.sshinjector.net
             red='\e[1;31m'
             green='\e[0;32m'
