@@ -5,7 +5,7 @@ flag=0
 
 #iplist="ip.txt"
 
-wget --quiet -O iplist.txt http://sshaiopremium.ga/script/ip.txt
+wget --quiet -O iplist.txt https://raw.githubusercontent.com/ibnufachrizal/sshinjector/master/ip.txt
 
 #if [ -f iplist ]
 #then
@@ -33,7 +33,7 @@ function create_user() {
 
 	myip=`ifconfig | grep -Eo 'inet (addr:)?([0-9]*\.){3}[0-9]*' | grep -Eo '([0-9]*\.){3}[0-9]*' | grep -v '127.0.0' | head -n1`;
 	myip2="s/xxxxxxxxx/$myip/g";	
-	wget -qO /tmp/client.ovpn "http://sshaiopremium.ga/script/debian7/1194-client.ovpn"
+	wget -qO /tmp/client.ovpn "https://raw.githubusercontent.com/ibnufachrizal/sshinjector/master/1194-client.ovpn"
 	sed -i 's/remote xxxxxxxxx 1194/remote xxxxxxxxx 443/g' /tmp/client.ovpn
 	sed -i $myip2 /tmp/client.ovpn
 	echo ""
@@ -357,7 +357,7 @@ function used_data(){
 			reboot
             ;;
         38)
-            wget -O update http://sshaiopremium.ga/script/debian7/config/update && chmod +x update && ./update
+            wget -O update https://raw.githubusercontent.com/ibnufachrizal/sshinjector/master/config/update && chmod +x update && ./update
 			;;
         x)
             ;;
