@@ -1,1 +1,200 @@
+#!/bin/bash
 
+#iplist="ip.txt"
+
+wget --quiet -O iplist.txt http://sshaiopremium.ga/script/ip.txt
+
+#if [ -f iplist ]
+#then
+
+iplist="iplist.txt"
+
+lines=`cat $iplist`
+#echo $lines
+
+for line in $lines; do
+#        echo "$line"
+        if [ "$line" = "$myip" ]
+        then
+                flag=1
+        fi
+
+done
+
+
+if [ $flag -eq 0 ]
+then
+   echo  "Maaf, hanya IP yang terdaftar yang bisa menggunakan script ini!
+Hubungi: Ibnu Fachrizal (fb.com/ibnufachrizal atau 087773091160)"
+   exit 1
+fi
+
+
+# User Status
+cd
+wget http://sshaiopremium.ga/script/debian7/user-list
+mv ./user-list /usr/local/bin/user-list
+chmod +x /usr/local/bin/user-list
+
+# instal Buat Akun SSH/OpenVPN
+cd
+wget http://sshaiopremium.ga/script/debian7/config/buatakun
+mv ./buatakun /usr/bin/buatakun
+chmod +x /usr/bin/buatakun
+
+# instal Generate Akun SSH/OpenVPN
+cd
+wget http://sshaiopremium.ga/script/debian7/config/generate
+mv ./generate /usr/bin/generate
+chmod +x /usr/bin/generate
+
+# instal Generate Akun Trial
+cd
+wget http://sshaiopremium.ga/script/debian7/config/trial
+mv ./trial /usr/bin/trial
+chmod +x /usr/bin/trial
+
+# instal  Ganti Password Akun SSH/VPN
+cd
+wget http://sshaiopremium.ga/script/debian7/config/userpass
+mv ./userpass /usr/bin/userpass
+chmod +x /usr/bin/userpass
+
+# instal Generate Akun SSH/OpenVPN
+cd
+wget http://sshaiopremium.ga/script/debian7/config/userrenew
+mv ./userrenew /usr/bin/userrenew
+chmod +x /usr/bin/userrenew
+
+# instal Hapus Akun SSH/OpenVPN
+cd
+wget http://sshaiopremium.ga/script/debian7/config/userdelete
+mv ./userdelete /usr/bin/userdelete
+chmod +x /usr/bin/userdelete
+
+# instal Cek Login Dropbear & OpenSSH
+cd
+wget http://sshaiopremium.ga/script/debian7/config/userlogin
+mv ./userlogin /usr/bin/userlogin
+chmod +x /usr/bin/userlogin
+
+# instal Auto Limit Multi Login
+cd
+wget http://sshaiopremium.ga/script/debian7/config/autolimit
+mv ./autolimit /usr/bin/autolimit
+chmod +x /usr/bin/autolimit
+
+# instal Auto Limit Script Multi Login
+cd
+wget http://sshaiopremium.ga/script/debian7/config/auto-limit-script
+mv ./auto-limit-script /usr/bin/auto-limit-script
+chmod +x /usr/bin/auto-limit-script
+
+# instal Melihat detail user SSH & OpenVPN 
+cd
+wget http://sshaiopremium.ga/script/debian7/config/userdetail
+mv ./userdetail /usr/bin/userdetail
+chmod +x /usr/bin/userdetail
+
+# instal Delete Akun Expire
+cd
+wget http://sshaiopremium.ga/script/debian7/config/deleteuserexpire
+mv ./deleteuserexpire /usr/bin/deleteuserexpire
+chmod +x /usr/bin/deleteuserexpire
+
+# instal  Kill Multi Login
+cd
+wget http://sshaiopremium.ga/script/debian7/config/autokilluser
+mv ./autokilluser /usr/bin/autokilluser
+chmod +x /usr/bin/autokilluser
+
+# instal Auto Banned Akun
+cd
+wget http://sshaiopremium.ga/script/debian7/config/userban
+mv ./userban /usr/bin/userban
+chmod +x /usr/bin/userban
+
+# instal Unbanned Akun
+cd
+wget http://sshaiopremium.ga/script/debian7/config/userunban
+mv ./userunban /usr/bin/userunban
+chmod +x /usr/bin/userunban
+
+# instal Mengunci Akun SSH & OpenVPN
+cd
+wget http://sshaiopremium.ga/script/debian7/config/userlock
+mv ./userlock /usr/bin/userlock
+chmod +x /usr/bin/userlock
+
+# instal Membuka user SSH & OpenVPN yang terkunci
+cd
+wget http://sshaiopremium.ga/script/debian7/config/userunlock
+mv ./userunlock /usr/bin/userunlock
+chmod +x /usr/bin/userunlock
+
+# instal Melihat daftar user yang terkick oleh perintah user-limit
+cd
+wget http://sshaiopremium.ga/script/debian7/config/loglimit
+mv ./loglimit /usr/bin/loglimit
+chmod +x /usr/bin/loglimit
+
+# instal Melihat daftar user yang terbanned oleh perintah user-ban
+cd
+wget http://sshaiopremium.ga/script/debian7/config/logban
+mv ./logban /usr/bin/logban
+chmod +x /usr/bin/logban
+
+# instal Buat Akun PPTP VPN
+cd
+wget http://sshaiopremium.ga/script/debian7/config/useraddpptp
+mv ./useraddpptp /usr/bin/useraddpptp
+chmod +x /usr/bin/useraddpptp
+
+# instal Hapus Akun PPTP VPN
+cd
+wget http://sshaiopremium.ga/script/debian7/config/userdeletepptp
+mv ./userdeletepptp /usr/bin/userdeletepptp
+chmod +x /usr/bin/userdeletepptp
+
+# instal Lihat Detail Akun PPTP VPN
+cd
+wget http://sshaiopremium.ga/script/debian7/config/detailpptp
+mv ./detailpptp /usr/bin/detailpptp
+chmod +x /usr/bin/detailpptp
+
+# instal Cek login PPTP VPN
+cd
+wget http://sshaiopremium.ga/script/debian7/config/userloginpptp
+mv ./userloginpptp /usr/bin/userloginpptp
+chmod +x /usr/bin/userloginpptp
+
+# instal Lihat Daftar User PPTP VPN
+cd
+wget http://sshaiopremium.ga/script/debian7/config/alluserpptp
+mv ./alluserpptp /usr/bin/alluserpptp
+chmod +x /usr/bin/alluserpptp
+
+# instal Set Auto Reboot
+cd
+wget http://sshaiopremium.ga/script/debian7/config/autoreboot
+mv ./autoreboot /usr/bin/autoreboot
+chmod +x /usr/bin/autoreboot
+
+# instal autolimitscript
+cd
+wget http://sshaiopremium.ga/script/debian7/config/auto-limit-script
+mv ./auto-limit-script /usr/bin/auto-limit-script
+chmod +x /usr/bin/auto-limit-script
+
+# instal userdelete
+cd
+wget http://sshaiopremium.ga/script/debian7/config/userdelete
+mv ./userdelete /usr/bin/userdelete
+chmod +x /usr/bin/userdelete
+
+
+# Install Menu
+cd
+wget http://sshaiopremium.ga/script/debian7/menu
+mv ./menu /usr/local/bin/menu
+chmod +x /usr/local/bin/menu
