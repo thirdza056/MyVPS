@@ -20,8 +20,8 @@ if [ $? -eq 0 ]; then
 # proses mengganti passwordnya
 userdel -f $username
 clear
-  echo "Script by SSHINJECTOR.NET"
-  echo "Terimakasih sudah berlangganan di SSHINJECTOR.NET"
+  echo "Script by sshinjector.net"
+  echo "Terimakasih sudah berlangganan di sshinjector.net-"
   echo " "
   echo "-----------------------------------------------"
   echo -e "Username ${blue}$username${NC} Sudah berhasil di ${red}HAPUS${NC}."
