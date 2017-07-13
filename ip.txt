@@ -9,16 +9,16 @@
 139.59.245.20               (SGDO - FOKUS FOKUS)
 
 103.227.252.187  (id.hostssh.me)
-sg1.s3rv.top
+sg1.s3rv.top 139.59.255.176
 sg2.s3rv.top 139.59.120.183
 sg3.s3rv.top 128.199.160.185
 sg4.s3rv.top 139.59.126.205
 sg5.s3rv.top 188.166.240.87
 sg6.s3rv.top 128.199.195.132
 jp.s3rv.top  45.76.52.183
-it1.s3rv.top 
-it2.s3rv.top
-cz.s3rv.top
+it1.s3rv.top 5.249.151.89
+it2.s3rv.top 94.177.213.103
 us.s3rv.top 45.76.11.97
+ca.s3rv.top 45.77.88.42
 
-212.237.62.87
+cz.s3rv.top 80.211.197.196
