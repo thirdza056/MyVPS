@@ -4,80 +4,45 @@ Automatic Script Installer by IBNU FACHRIZAL
 
 Usage
 
-Centos 6 (OpenVZ VPS)
+INSTAL VPS DEBIAN 7 ( 32/64 ) KVM & OVZ
 
-wget https://raw.github.com/arieonline/autoscript/master/centos6.sh
-bash centos6.sh
-Tested on
 
-CentOS 6 32 bit
-CentOS 6 64 bit
-OpenVZ only
-Centos 6 (KVM VPS)
+wget -O debian7.sh https://raw.githubusercontent.com/ibnufachrizal/sshaiopremium/master/debian7.sh && chmod +x debian7.sh && ./debian7.sh
 
-wget https://raw.github.com/arieonline/autoscript/master/centos6-kvm.sh
-bash centos6-kvm.sh
-Tested on
 
-CentOS 6 32 bit
-CentOS 6 64 bit
-KVM only
-Debian 6 32bit
 
-wget https://raw.github.com/arieonline/autoscript/master/debian6.sh
-bash debian6.sh
-Tested on
 
-Debian 6 32 bit
-Debian 6 64 bit
-OpenVZ only
-Debian 7 32bit
 
-wget https://raw.github.com/arieonline/autoscript/master/debian7.sh
-bash debian7.sh
-Tested on
-
-Debian 7 32 bit
-Debian 7 64 bit
-OpenVZ only
-Description
-
-What's server included
-
-OpenSSH port 22, 143
-OpenVPN port 1194 tcp
-Dropbear port 109, 110, 443
-Squid port 8080 (limit to IP VPS)
-badvpn-udpgw port 7300
-What's features included
-
-Webmin http(s)://[ip]:10000/
-vnstat http://[ip]/vnstat/
-MRTG http://[ip]/mrtg/
-Timezone : Asia/Jakarta
-Fail2Ban : [on]
-IPv6 : [off]
-What's tools included
-
-axel
-bmon
-htop
-iftop
-mtr
-nethogs
-What's script included
-
-screenfetch
-ps_mem.py (https://github.com/pixelb/ps_mem/)
-speedtest-cli (https://github.com/sivel/speedtest-cli)
-bench-network.sh
-user-login.sh
-user-limit.sh
-user-expire.sh
-Reference
-
-http://blog.jualssh.com/
-http://blog.jualssh.com/2014/01/centos6-automatic-script-installer/
-http://blog.jualssh.com/2014/01/debian6-sh-automatic-script-installer/
-http://blog.jualssh.com/2014/01/debian7-sh-automatic-script-installer/
-Openvpn wget https://raw.github.com/arieonline/autoscript/master/dimas.debian bash dimas.debian
+# info
+clear
+echo "Setup by Ibnu Fachrizal"
+echo "OpenVPN  : TCP 1194 (client config : http://$MYIP:81/client.ovpn)"
+echo "OpenSSH  : 22, 143"
+echo "Dropbear : 80, 109, 110, 443"
+echo "Squid3   : 8080, 8000, 3128 (limit to IP SSH)"
+echo "badvpn   : badvpn-udpgw port 7300"
+echo "nginx    : 81"
+echo ""
+echo "----------"
+echo "axel"
+echo "bmon"
+echo "htop"
+echo "iftop"
+echo "mtr"
+echo "rkhunter"
+echo "nethogs: nethogs venet0"
+echo "----------"  |
+echo "Webmin   : http://$MYIP:10000/"
+echo "vnstat   : http://$MYIP:81/vnstat/"
+echo "MRTG     : http://$MYIP:81/mrtg/"
+echo "Timezone : Asia/Jakarta"
+echo "Fail2Ban : [on]"
+echo "IPv6     : [off]"
+echo "Status   : please type ./status to check user status"
+echo ""
+echo "VPS REBOOT TIAP JAM 24.00 !"
+echo""
+echo "Please Reboot your VPS !"
+echo "================================================"
+echo "Script Created By Ibnu Fachrizal"
+echo "Terimakasih telah berlangganan di www.sshinjector.net"
