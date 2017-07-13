@@ -11,38 +11,36 @@ wget -O debian7.sh https://raw.githubusercontent.com/ibnufachrizal/sshaiopremium
 
 
 
+## Description
 
+### What's server included
+Setup by Ibnu Fachrizal
+* OpenVPN  : TCP 1194 (client config : http://$MYIP:81/client.ovpn)
+* OpenSSH  : 22, 143
+* Dropbear : 80, 109, 110, 443
+* Squid3   : 8080, 8000, 3128 (limit to IP SSH)
+* badvpn   : badvpn-udpgw port 7300
+* nginx    : 81
 
-# info
-clear
-echo "Setup by Ibnu Fachrizal"  | tee -a log-install.txt
-echo "OpenVPN  : TCP 1194 (client config : http://$MYIP:81/client.ovpn)"  | tee -a log-install.txt
-echo "OpenSSH  : 22, 143"  | tee -a log-install.txt
-echo "Dropbear : 80, 109, 110, 443"  | tee -a log-install.txt
-echo "Squid3   : 8080, 8000, 3128 (limit to IP SSH)"  | tee -a log-install.txt
-echo "badvpn   : badvpn-udpgw port 7300"  | tee -a log-install.txt
-echo "nginx    : 81"  | tee -a log-install.txt
-echo ""  | tee -a log-install.txt
-echo "----------"  | tee -a log-install.txt
-echo "axel"    | tee -a log-install.txt
-echo "bmon"    | tee -a log-install.txt
-echo "htop"    | tee -a log-install.txt
-echo "iftop"    | tee -a log-install.txt
-echo "mtr"    | tee -a log-install.txt
-echo "rkhunter"    | tee -a log-install.txt
-echo "nethogs: nethogs venet0"    | tee -a log-install.txt
-echo "----------"  | tee -a log-install.txt
-echo "Webmin   : http://$MYIP:10000/"  | tee -a log-install.txt
-echo "vnstat   : http://$MYIP:81/vnstat/"  | tee -a log-install.txt
-echo "MRTG     : http://$MYIP:81/mrtg/"  | tee -a log-install.txt
-echo "Timezone : Asia/Jakarta"  | tee -a log-install.txt
-echo "Fail2Ban : [on]"  | tee -a log-install.txt
-echo "IPv6     : [off]"  | tee -a log-install.txt
-echo "Status   : please type ./status to check user status"  | tee -a log-install.txt
-echo ""  | tee -a log-install.txt
-echo "VPS REBOOT TIAP JAM 24.00 !"  | tee -a log-install.txt
-echo""  | tee -a log-install.txt
-echo "Please Reboot your VPS !"  | tee -a log-install.txt
-echo "================================================"  | tee -a log-install.txt
-echo "Script Created By Ibnu Fachrizal"  | tee -a log-install.txt
-echo "Terimakasih telah berlangganan di www.sshinjector.net"  | tee -a log-install.txt
+### What's tools included
+* axel
+* bmon
+* htop
+* iftop
+* mtr
+* nethogs  
+
+### What's features included
+* Webmin http(s)://[ip]:10000/
+* vnstat http://[ip]/vnstat/
+* MRTG http://[ip]/mrtg/
+* Timezone : Asia/Jakarta
+* Fail2Ban : [on]
+* IPv6     : [off]
+* Status   : please type ./status to check user status
+
+VPS REBOOT TIAP JAM 24.00 !
+Please Reboot your VPS !
+
+* Script Created By Ibnu Fachrizal
+* Terimakasih telah berlangganan di www.sshinjector.net
