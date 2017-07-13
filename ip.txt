@@ -15,7 +15,7 @@ sg3.s3rv.top 128.199.160.185
 sg4.s3rv.top 139.59.126.205
 sg5.s3rv.top 188.166.240.87
 sg6.s3rv.top 128.199.195.132
-jp.s3rv.top 
+jp.s3rv.top  45.76.52.183
 it1.s3rv.top
 it2.s3rv.top
 cz.s3rv.top
