@@ -15,34 +15,34 @@ wget -O debian7.sh https://raw.githubusercontent.com/ibnufachrizal/sshaiopremium
 
 # info
 clear
-echo "Setup by Ibnu Fachrizal"
-echo "OpenVPN  : TCP 1194 (client config : http://$MYIP:81/client.ovpn)"
-echo "OpenSSH  : 22, 143"
-echo "Dropbear : 80, 109, 110, 443"
-echo "Squid3   : 8080, 8000, 3128 (limit to IP SSH)"
-echo "badvpn   : badvpn-udpgw port 7300"
-echo "nginx    : 81"
-echo ""
-echo "----------"
-echo "axel"
-echo "bmon"
-echo "htop"
-echo "iftop"
-echo "mtr"
-echo "rkhunter"
-echo "nethogs: nethogs venet0"
-echo "----------"  |
-echo "Webmin   : http://$MYIP:10000/"
-echo "vnstat   : http://$MYIP:81/vnstat/"
-echo "MRTG     : http://$MYIP:81/mrtg/"
-echo "Timezone : Asia/Jakarta"
-echo "Fail2Ban : [on]"
-echo "IPv6     : [off]"
-echo "Status   : please type ./status to check user status"
-echo ""
-echo "VPS REBOOT TIAP JAM 24.00 !"
-echo""
-echo "Please Reboot your VPS !"
-echo "================================================"
-echo "Script Created By Ibnu Fachrizal"
-echo "Terimakasih telah berlangganan di www.sshinjector.net"
+echo "Setup by Ibnu Fachrizal"  | tee -a log-install.txt
+echo "OpenVPN  : TCP 1194 (client config : http://$MYIP:81/client.ovpn)"  | tee -a log-install.txt
+echo "OpenSSH  : 22, 143"  | tee -a log-install.txt
+echo "Dropbear : 80, 109, 110, 443"  | tee -a log-install.txt
+echo "Squid3   : 8080, 8000, 3128 (limit to IP SSH)"  | tee -a log-install.txt
+echo "badvpn   : badvpn-udpgw port 7300"  | tee -a log-install.txt
+echo "nginx    : 81"  | tee -a log-install.txt
+echo ""  | tee -a log-install.txt
+echo "----------"  | tee -a log-install.txt
+echo "axel"    | tee -a log-install.txt
+echo "bmon"    | tee -a log-install.txt
+echo "htop"    | tee -a log-install.txt
+echo "iftop"    | tee -a log-install.txt
+echo "mtr"    | tee -a log-install.txt
+echo "rkhunter"    | tee -a log-install.txt
+echo "nethogs: nethogs venet0"    | tee -a log-install.txt
+echo "----------"  | tee -a log-install.txt
+echo "Webmin   : http://$MYIP:10000/"  | tee -a log-install.txt
+echo "vnstat   : http://$MYIP:81/vnstat/"  | tee -a log-install.txt
+echo "MRTG     : http://$MYIP:81/mrtg/"  | tee -a log-install.txt
+echo "Timezone : Asia/Jakarta"  | tee -a log-install.txt
+echo "Fail2Ban : [on]"  | tee -a log-install.txt
+echo "IPv6     : [off]"  | tee -a log-install.txt
+echo "Status   : please type ./status to check user status"  | tee -a log-install.txt
+echo ""  | tee -a log-install.txt
+echo "VPS REBOOT TIAP JAM 24.00 !"  | tee -a log-install.txt
+echo""  | tee -a log-install.txt
+echo "Please Reboot your VPS !"  | tee -a log-install.txt
+echo "================================================"  | tee -a log-install.txt
+echo "Script Created By Ibnu Fachrizal"  | tee -a log-install.txt
+echo "Terimakasih telah berlangganan di www.sshinjector.net"  | tee -a log-install.txt
