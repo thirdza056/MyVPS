@@ -86,8 +86,8 @@
 		       do
                if [ ${jumlah[$i]} -gt $MAX ]; then
                date=`date +"%Y-%m-%d %X"`;
-               echo "SSHINJECTOR.NET - $date - ${username[$i]} - ${jumlah[$i]}";
-               echo "SSHINJECTOR.NET - $date - ${username[$i]} - ${jumlah[$i]}" >> /root/log-ban.txt;
+               echo "sshinjector.net - $date - ${username[$i]} - ${jumlah[$i]}";
+               echo "sshinjector.net - $date - ${username[$i]} - ${jumlah[$i]}" >> /root/log-ban.txt;
                passwd -l ${username[$i]}
 			   kill ${pid[$i]};
                pid[$i]="";
