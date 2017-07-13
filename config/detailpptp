@@ -40,4 +40,3 @@
             echo "Username tidak ditemukan di server anda"
             exit 1
             fi
-            echo""
