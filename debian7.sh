@@ -141,7 +141,7 @@ chmod +x /usr/bin/badvpn-udpgw
 screen -AmdS badvpn badvpn-udpgw --listen-addr 127.0.0.1:7300
 
 # install mrtg
-wget -O /etc/snmpd.conf "https://raw.githubusercontent.com/ibnufachrizal/sshinjector/master/snmpd.conf"
+wget -O /etc/snmp/snmpd.conf "https://raw.githubusercontent.com/ibnufachrizal/sshinjector/master/snmpd.conf"
 wget -O /root/mrtg-mem.sh "https://raw.githubusercontent.com/ibnufachrizal/sshinjector/master/mrtg-mem.sh"
 chmod +x /root/mrtg-mem.sh
 cd /etc/snmp/
