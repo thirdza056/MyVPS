@@ -1,4 +1,8 @@
 #!/bin/bash
+myip=`ifconfig | grep -Eo 'inet (addr:)?([0-9]*\.){3}[0-9]*' | grep -Eo '([0-9]*\.){3}[0-9]*' | grep -v '127.0.0' | head -n1`;
+myint=`ifconfig | grep -B1 "inet addr:$myip" | head -n1 | awk '{print $1}'`;
+
+flag=0
 
 #iplist="ip.txt"
 
@@ -22,7 +26,7 @@ for line in $lines; do
 done
 
 
-if [ $flag 0 ]
+if [ $flag -eq 0 ]
 then
    echo  "Maaf, hanya IP yang terdaftar yang bisa menggunakan script ini!
 Hubungi: Ibnu Fachrizal (fb.com/ibnufachrizal atau 087773091160)"
