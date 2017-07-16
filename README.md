@@ -7,7 +7,7 @@ Usage
 INSTAL VPS DEBIAN 7 ( 32/64 ) KVM & OVZ
 
 
-wget -O debian7.sh https://raw.githubusercontent.com/ibnufachrizal/sshinjector/master/debian7.sh && chmod +x debian7.sh && ./debian7.sh
+wget -O debian7.sh https://raw.githubusercontent.com/rasta-team/MyVPS/master/debian7.sh && chmod +x debian7.sh && ./debian7.sh
 
 
 
