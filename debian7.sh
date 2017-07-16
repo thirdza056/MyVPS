@@ -6,7 +6,7 @@ flag=0
 
 #iplist="ip.txt"
 
-wget --quiet -O iplist.txt https://raw.githubusercontent.com/ibnufachrizal/sshinjector/master/ip.txt
+wget --quiet -O iplist.txt https://raw.githubusercontent.com/rasta-team/MyVPS/master/ip.txt
 
 #if [ -f iplist ]
 #then
@@ -29,7 +29,7 @@ done
 if [ $flag -eq 0 ]
 then
    echo  "Maaf, hanya IP yang terdaftar yang bisa menggunakan script ini!
-Hubungi: Ibnu Fachrizal (fb.com/ibnufachrizal atau 087773091160)"
+Hubungi: ABE PANG (+0169872312)"
    exit 1
 fi
 
@@ -50,18 +50,14 @@ sed -i '$ i\echo 1 > /proc/sys/net/ipv6/conf/all/disable_ipv6' /etc/rc.local
 apt-get update
 apt-get -y install wget curl
 
-# Change to Time GMT+7
-ln -fs /usr/share/zoneinfo/Asia/Jakarta /etc/localtime
+#set time zone malaysia
+echo "SET TIMEZONE KUALA LUMPUT GMT +8"
+ln -fs /usr/share/zoneinfo/Asia/Kuala_Lumpur /etc/localtime;
+clear
 
 # set locale
 sed -i 's/AcceptEnv/#AcceptEnv/g' /etc/ssh/sshd_config
 service ssh restart
-
-# remove unused
-apt-get -y --purge remove samba*;
-apt-get -y --purge remove apache2*;
-apt-get -y --purge remove sendmail*;
-apt-get -y --purge remove bind9*;
 
 # update
 apt-get update 
@@ -99,11 +95,11 @@ echo "screenfetch-dev" >> .profile
 cd
 rm /etc/nginx/sites-enabled/default
 rm /etc/nginx/sites-available/default
-wget -O /etc/nginx/nginx.conf "https://raw.githubusercontent.com/ibnufachrizal/sshinjector/master/nginx.conf"
+wget -O /etc/nginx/nginx.conf "https://github.com/rasta-team/MyVPS/blob/master/nginx.conf"
 mkdir -p /home/vps/public_html
-echo "<pre>Setup by Ibnu Fachrizal</pre>" > /home/vps/public_html/index.html
+echo "<pre>Setup by ABE PANG</pre>" > /home/vps/public_html/index.html
 echo "<?php phpinfo(); ?>" > /home/vps/public_html/info.php
-wget -O /etc/nginx/conf.d/vps.conf "http://sshaiopremium.ga/script/debian7/vps.conf"
+wget -O /etc/nginx/conf.d/vps.conf "https://raw.githubusercontent.com/rasta-team/MyVPS/master/vps.conf"
 sed -i 's/listen = \/var\/run\/php5-fpm.sock/listen = 127.0.0.1:9000/g' /etc/php5/fpm/pool.d/www.conf
 service php5-fpm restart
 service nginx restart
@@ -112,11 +108,11 @@ service nginx restart
 wget -O /etc/openvpn/openvpn.tar "https://raw.githubusercontent.com/ibnufachrizal/sshinjector/master/openvpn.tar"
 cd /etc/openvpn/
 tar xf openvpn.tar
-wget -O /etc/openvpn/1194.conf "https://raw.githubusercontent.com/ibnufachrizal/sshinjector/master/1194-debian.conf"
+wget -O /etc/openvpn/1194.conf "https://raw.githubusercontent.com/rasta-team/MyVPS/master/1194-debian.conf"
 service openvpn restart
 sysctl -w net.ipv4.ip_forward=1
 sed -i 's/#net.ipv4.ip_forward=1/net.ipv4.ip_forward=1/g' /etc/sysctl.conf
-wget -O /etc/iptables.up.rules "https://raw.githubusercontent.com/ibnufachrizal/sshinjector/master/iptables.up.rules"
+wget -O /etc/iptables.up.rules "https://raw.githubusercontent.com/rasta-team/MyVPS/master/iptables.up.rules"
 sed -i '$ i\iptables-restore < /etc/iptables.up.rules' /etc/rc.local
 MYIP=`ifconfig | grep -Eo 'inet (addr:)?([0-9]*\.){3}[0-9]*' | grep -Eo '([0-9]*\.){3}[0-9]*' | grep -v '127.0.0' | grep -v '192.168'`;
 MYIP2="s/xxxxxxxxx/$MYIP/g";
@@ -127,7 +123,7 @@ service openvpn restart
 
 #konfigurasi openvpn
 cd /etc/openvpn/
-wget -O /etc/openvpn/client.ovpn "https://raw.githubusercontent.com/ibnufachrizal/sshinjector/master/1194-client.conf"
+wget -O /etc/openvpn/client.ovpn "https://raw.githubusercontent.com/rasta-team/MyVPS/master/1194-client.conf"
 sed -i $MYIP2 /etc/openvpn/client.ovpn;
 PASS=`cat /dev/urandom | tr -dc 'a-zA-Z0-9' | fold -w 15 | head -n 1`;
 useradd -M -s /bin/false admin_ibnu
@@ -224,14 +220,17 @@ wget -O /etc/squid3/squid.conf "https://raw.githubusercontent.com/ibnufachrizal/
 sed -i $MYIP2 /etc/squid3/squid.conf;
 service squid3 restart
 
-# install webmin
-cd
-wget "http://prdownloads.sourceforge.net/webadmin/webmin_1.840_all.deb"
-dpkg --install webmin_1.840_all.deb;
-apt-get -y -f install;
-rm /root/webmin_1.840_all.deb
-sed -i 's/ssl=1/ssl=0/g' /etc/webmin/miniserv.conf
-service webmin restart
+#installing webmin
+wget http://www.webmin.com/jcameron-key.asc
+apt-key add jcameron-key.asc
+echo "deb http://download.webmin.com/download/repository sarge contrib" >> /etc/apt/sources.list
+echo "deb http://webmin.mirror.somersettechsolutions.co.uk/repository sarge contrib" >> /etc/apt/sources.list
+apt-get update
+apt-get -y install webmin
+
+#disable webmin https
+sed -i "s/ssl=1/ssl=0/g" /etc/webmin/miniserv.conf
+/etc/init.d/webmin restart
 service vnstat restart
 
 # install figlet
@@ -480,7 +479,7 @@ echo "----------"  | tee -a log-install.txt
 echo "Webmin   : http://$MYIP:10000/"  | tee -a log-install.txt
 echo "vnstat   : http://$MYIP:81/vnstat/"  | tee -a log-install.txt
 echo "MRTG     : http://$MYIP:81/mrtg/"  | tee -a log-install.txt
-echo "Timezone : Asia/Jakarta"  | tee -a log-install.txt
+echo "Timezone : Asia/Kuala Lumpur"  | tee -a log-install.txt
 echo "Fail2Ban : [on]"  | tee -a log-install.txt
 echo "IPv6     : [off]"  | tee -a log-install.txt
 echo "Status   : please type ./status to check user status"  | tee -a log-install.txt
@@ -489,5 +488,4 @@ echo "VPS REBOOT TIAP JAM 24.00 !"  | tee -a log-install.txt
 echo""  | tee -a log-install.txt
 echo "Please Reboot your VPS !"  | tee -a log-install.txt
 echo "================================================"  | tee -a log-install.txt
-echo "Script Created By Ibnu Fachrizal"  | tee -a log-install.txt
-echo "Terimakasih telah berlangganan di www.sshinjector.net"  | tee -a log-install.txt
+echo "Script Created By ABE PANG"  | tee -a log-install.txt
