@@ -7,7 +7,7 @@ flag=0
 #iplist="ip.txt"
 
 #wget --quiet -O iplist.txt https://raw.githubusercontent.com/rasta-team/MyVPS/master/ip.txt
-wget --quiet -O iplist.txthttps://drive.google.com/file/d/0B4Z-IY450xExLWpsZG9sNzlwcFE/view?usp=sharing
+wget --quiet -O iplist.txt https://drive.google.com/file/d/0B4Z-IY450xExLWpsZG9sNzlwcFE/view?usp=sharing
 
 #if [ -f iplist ]
 #then
@@ -31,6 +31,8 @@ if [ $flag -eq 0 ]
 then
    echo  "Maaf, hanya IP yang terdaftar sahaja boleh menggunakan script ini!
 Hubungi: ABE PANG (+0169872312) Telegram : @myvpn007"
+
+rm -f /root/iplist.txt
    exit 1
 fi
 
