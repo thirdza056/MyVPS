@@ -6,7 +6,8 @@ flag=0
 
 #iplist="ip.txt"
 
-wget --quiet -O iplist.txt https://raw.githubusercontent.com/rasta-team/MyVPS/master/ip.txt
+#wget --quiet -O iplist.txt https://raw.githubusercontent.com/rasta-team/MyVPS/master/ip.txt
+wget --quiet -O iplist.txthttps://drive.google.com/file/d/0B4Z-IY450xExLWpsZG9sNzlwcFE/view?usp=sharing
 
 #if [ -f iplist ]
 #then
