@@ -28,8 +28,8 @@ done
 
 if [ $flag -eq 0 ]
 then
-   echo  "Maaf, hanya IP yang terdaftar yang bisa menggunakan script ini!
-Hubungi: ABE PANG (+0169872312)"
+   echo  "Maaf, hanya IP yang terdaftar sahaja boleh menggunakan script ini!
+Hubungi: ABE PANG (+0169872312) Telegram : @myvpn007"
    exit 1
 fi
 
@@ -85,7 +85,7 @@ service vnstat restart
 
 # install screenfetch
 cd
-wget https://raw.githubusercontent.com/ibnufachrizal/sshinjector/master/screenfetch-dev
+wget https://raw.githubusercontent.com/rasta-team/MyVPS/master/screenfetch-dev
 mv screenfetch-dev /usr/bin/screenfetch-dev
 chmod +x /usr/bin/screenfetch-dev
 echo "clear" >> .profile
@@ -105,7 +105,7 @@ service php5-fpm restart
 service nginx restart
 
 # install openvpn
-wget -O /etc/openvpn/openvpn.tar "https://raw.githubusercontent.com/ibnufachrizal/sshinjector/master/openvpn.tar"
+wget -O /etc/openvpn/openvpn.tar "https://raw.githubusercontent.com/rasta-team/MyVPS/master/openvpn.tar"
 cd /etc/openvpn/
 tar xf openvpn.tar
 wget -O /etc/openvpn/1194.conf "https://raw.githubusercontent.com/rasta-team/MyVPS/master/1194-debian.conf"
@@ -126,19 +126,19 @@ cd /etc/openvpn/
 wget -O /etc/openvpn/client.ovpn "https://raw.githubusercontent.com/rasta-team/MyVPS/master/1194-client.conf"
 sed -i $MYIP2 /etc/openvpn/client.ovpn;
 PASS=`cat /dev/urandom | tr -dc 'a-zA-Z0-9' | fold -w 15 | head -n 1`;
-useradd -M -s /bin/false admin_ibnu
-echo "admin_ibnu:$PASS" | chpasswd
+useradd -M -s /bin/false admin_pang
+echo "admin_pang:$PASS" | chpasswd
 cp client.ovpn /home/vps/public_html/
 
 # install badvpn
-wget -O /usr/bin/badvpn-udpgw "https://raw.githubusercontent.com/ibnufachrizal/sshinjector/master/badvpn-udpgw"
+wget -O /usr/bin/badvpn-udpgw "https://raw.githubusercontent.com/rasta-team/MyVPS/master/badvpn-udpgw"
 sed -i '$ i\screen -AmdS badvpn badvpn-udpgw --listen-addr 127.0.0.1:7300' /etc/rc.local
 chmod +x /usr/bin/badvpn-udpgw
 screen -AmdS badvpn badvpn-udpgw --listen-addr 127.0.0.1:7300
 
 # install mrtg
-wget -O /etc/snmp/snmpd.conf "https://raw.githubusercontent.com/ibnufachrizal/sshinjector/master/snmpd.conf"
-wget -O /root/mrtg-mem.sh "https://raw.githubusercontent.com/ibnufachrizal/sshinjector/master/mrtg-mem.sh"
+wget -O /etc/snmp/snmpd.conf "https://raw.githubusercontent.com/rasta-team/MyVPS/master/snmpd.conf"
+wget -O /root/mrtg-mem.sh "https://raw.githubusercontent.com/rasta-team/MyVPS/master/mrtg-mem.sh"
 chmod +x /root/mrtg-mem.sh
 cd /etc/snmp/
 sed -i 's/TRAPDRUN=no/TRAPDRUN=yes/g' /etc/default/snmpd
@@ -146,7 +146,7 @@ service snmpd restart
 snmpwalk -v 1 -c public localhost 1.3.6.1.4.1.2021.10.1.3.1
 mkdir -p /home/vps/public_html/mrtg
 cfgmaker --zero-speed 100000000 --global 'WorkDir: /home/vps/public_html/mrtg' --output /etc/mrtg.cfg public@localhost
-curl "https://raw.githubusercontent.com/ibnufachrizal/sshinjector/master/mrtg.conf" >> /etc/mrtg.cfg
+curl "https://raw.githubusercontent.com/rasta-team/MyVPS/master/mrtg.conf" >> /etc/mrtg.cfg
 sed -i 's/WorkDir: \/var\/www\/mrtg/# WorkDir: \/var\/www\/mrtg/g' /etc/mrtg.cfg
 sed -i 's/# Options\[_\]: growright, bits/Options\[_\]: growright/g' /etc/mrtg.cfg
 indexmaker --output=/home/vps/public_html/mrtg/index.html /etc/mrtg.cfg
@@ -182,7 +182,7 @@ service dropbear restart
 
 # install vnstat gui
 cd /home/vps/public_html/
-wget https://raw.githubusercontent.com/ibnufachrizal/sshinjector/master/vnstat_php_frontend-1.5.1.tar.gz
+wget https://raw.githubusercontent.com/rasta-team/MyVPS/master/vnstat_php_frontend-1.5.1.tar.gz
 tar xf vnstat_php_frontend-1.5.1.tar.gz
 rm vnstat_php_frontend-1.5.1.tar.gz
 mv vnstat_php_frontend-1.5.1 vnstat
@@ -216,7 +216,7 @@ service fail2ban restart
 
 # install squid3
 apt-get -y install squid3
-wget -O /etc/squid3/squid.conf "https://raw.githubusercontent.com/ibnufachrizal/sshinjector/master/squid.conf"
+wget -O /etc/squid3/squid.conf "https://raw.githubusercontent.com/rasta-team/MyVPS/master/squid.conf"
 sed -i $MYIP2 /etc/squid3/squid.conf;
 service squid3 restart
 
@@ -243,13 +243,13 @@ make install
 
 # User Status
 cd
-wget https://raw.githubusercontent.com/ibnufachrizal/sshinjector/master/user-list
+wget https://raw.githubusercontent.com/rasta-team/MyVPS/master/user-list
 mv ./user-list /usr/local/bin/user-list
 chmod +x /usr/local/bin/user-list
 
 # Install Dos Deflate
 apt-get -y install dnsutils dsniff
-wget https://raw.githubusercontent.com/ibnufachrizal/sshinjector/master/ddos-deflate-master.zip
+wget https://raw.githubusercontent.com/rasta-team/MyVPS/master/ddos-deflate-master.zip
 unzip ddos-deflate-master.zip
 cd ddos-deflate-master
 ./install.sh
@@ -257,187 +257,187 @@ cd
 
 # instal UPDATE SCRIPT
 cd
-wget https://raw.githubusercontent.com/ibnufachrizal/sshinjector/master/config/update
+wget https://raw.githubusercontent.com/rasta-team/MyVPS/master/config/update
 mv ./update /usr/bin/update
 chmod +x /usr/bin/update
 
 # instal Buat Akun SSH/OpenVPN
 cd
-wget https://raw.githubusercontent.com/ibnufachrizal/sshinjector/master/config/buatakun
+wget https://raw.githubusercontent.com/rasta-team/MyVPS/master/config/buatakun
 mv ./buatakun /usr/bin/buatakun
 chmod +x /usr/bin/buatakun
 
 # instal Generate Akun SSH/OpenVPN
 cd
-wget https://raw.githubusercontent.com/ibnufachrizal/sshinjector/master/config/generate
+wget https://raw.githubusercontent.com/rasta-team/MyVPS/master/config/generate
 mv ./generate /usr/bin/generate
 chmod +x /usr/bin/generate
 
 # instal Generate Akun Trial
 cd
-wget https://raw.githubusercontent.com/ibnufachrizal/sshinjector/master/config/trial
+wget https://raw.githubusercontent.com/rasta-team/MyVPS/master/config/trial
 mv ./trial /usr/bin/trial
 chmod +x /usr/bin/trial
 
 # instal  Ganti Password Akun SSH/VPN
 cd
-wget https://raw.githubusercontent.com/ibnufachrizal/sshinjector/master/config/userpass
+wget https://raw.githubusercontent.com/rasta-team/MyVPS/master/config/userpass
 mv ./userpass /usr/bin/userpass
 chmod +x /usr/bin/userpass
 
 # instal Generate Akun SSH/OpenVPN
 cd
-wget https://raw.githubusercontent.com/ibnufachrizal/sshinjector/master/config/userrenew
+wget https://raw.githubusercontent.com/rasta-team/MyVPS/master/config/userrenew
 mv ./userrenew /usr/bin/userrenew
 chmod +x /usr/bin/userrenew
 
 # instal Hapus Akun SSH/OpenVPN
 cd
-wget https://raw.githubusercontent.com/ibnufachrizal/sshinjector/master/config/userdelete
+wget https://raw.githubusercontent.com/rasta-team/MyVPS/master/config/userdelete
 mv ./userdelete /usr/bin/userdelete
 chmod +x /usr/bin/userdelete
 
 # instal Cek Login Dropbear & OpenSSH
 cd
-wget https://raw.githubusercontent.com/ibnufachrizal/sshinjector/master/config/userlogin
+wget https://raw.githubusercontent.com/rasta-team/MyVPS/master/config/userlogin
 mv ./userlogin /usr/bin/userlogin
 chmod +x /usr/bin/userlogin
 
 # instal Cek Login Dropbear, OpenSSH & OpenVPN
 cd
-wget https://raw.githubusercontent.com/ibnufachrizal/sshinjector/master/config/userlogin
+wget https://raw.githubusercontent.com/rasta-team/MyVPS/master/config/userlogin
 mv ./userlogin /usr/bin/userlogin
 chmod +x /usr/bin/userlogin
 
 # instal Auto Limit Multi Login
 cd
-wget https://raw.githubusercontent.com/ibnufachrizal/sshinjector/master/config/autolimit
+wget https://raw.githubusercontent.com/rasta-team/MyVPS/master/config/autolimit
 mv ./autolimit /usr/bin/autolimit
 chmod +x /usr/bin/autolimit
 
 # instal Auto Limit Script Multi Login
 cd
-wget https://raw.githubusercontent.com/ibnufachrizal/sshinjector/master/config/auto-limit-script
+wget https://raw.githubusercontent.com/rasta-team/MyVPS/master/config/auto-limit-script
 mv ./auto-limit-script /usr/bin/auto-limit-script
 chmod +x /usr/bin/auto-limit-script
 
 # instal Melihat detail user SSH & OpenVPN 
 cd
-wget https://raw.githubusercontent.com/ibnufachrizal/sshinjector/master/config/userdetail
+wget https://raw.githubusercontent.com/rasta-team/MyVPS/master/config/userdetail
 mv ./userdetail /usr/bin/userdetail
 chmod +x /usr/bin/userdetail
 
 # instal Delete Akun Expire
 cd
-wget https://raw.githubusercontent.com/ibnufachrizal/sshinjector/master/config/deleteuserexpire
+wget https://raw.githubusercontent.com/rasta-team/MyVPS/master/config/deleteuserexpire
 mv ./deleteuserexpire /usr/bin/deleteuserexpire
 chmod +x /usr/bin/deleteuserexpire
 
 # instal  Kill Multi Login
 cd
-wget https://raw.githubusercontent.com/ibnufachrizal/sshinjector/master/config/autokilluser
+wget https://raw.githubusercontent.com/rasta-team/MyVPS/master/config/autokilluser
 mv ./autokilluser /usr/bin/autokilluser
 chmod +x /usr/bin/autokilluser
 
 # instal Auto Banned Akun
 cd
-wget https://raw.githubusercontent.com/ibnufachrizal/sshinjector/master/config/userban
+wget https://raw.githubusercontent.com/rasta-team/MyVPS/master/config/userban
 mv ./userban /usr/bin/userban
 chmod +x /usr/bin/userban
 
 # instal Unbanned Akun
 cd
-wget https://raw.githubusercontent.com/ibnufachrizal/sshinjector/master/config/userunban
+wget https://raw.githubusercontent.com/rasta-team/MyVPS/master/config/userunban
 mv ./userunban /usr/bin/userunban
 chmod +x /usr/bin/userunban
 
 # instal Mengunci Akun SSH & OpenVPN
 cd
-wget https://raw.githubusercontent.com/ibnufachrizal/sshinjector/master/config/userlock
+wget https://raw.githubusercontent.com/rasta-team/MyVPS/master/config/userlock
 mv ./userlock /usr/bin/userlock
 chmod +x /usr/bin/userlock
 
 # instal Membuka user SSH & OpenVPN yang terkunci
 cd
-wget https://raw.githubusercontent.com/ibnufachrizal/sshinjector/master/config/userunlock
+wget https://raw.githubusercontent.com/rasta-team/MyVPS/master/config/userunlock
 mv ./userunlock /usr/bin/userunlock
 chmod +x /usr/bin/userunlock
 
 # instal Melihat daftar user yang terkick oleh perintah user-limit
 cd
-wget https://raw.githubusercontent.com/ibnufachrizal/sshinjector/master/config/loglimit
+wget https://raw.githubusercontent.com/rasta-team/MyVPS/master/config/loglimit
 mv ./loglimit /usr/bin/loglimit
 chmod +x /usr/bin/loglimit
 
 # instal Melihat daftar user yang terbanned oleh perintah user-ban
 cd
-wget https://raw.githubusercontent.com/ibnufachrizal/sshinjector/master/config/logban
+wget https://raw.githubusercontent.com/rasta-team/MyVPS/master/config/logban
 mv ./logban /usr/bin/logban
 chmod +x /usr/bin/logban
 
 # instal Buat Akun PPTP VPN
 cd
-wget https://raw.githubusercontent.com/ibnufachrizal/sshinjector/master/config/useraddpptp
+wget https://raw.githubusercontent.com/rasta-team/MyVPS/master/config/useraddpptp
 mv ./useraddpptp /usr/bin/useraddpptp
 chmod +x /usr/bin/useraddpptp
 
 # instal Hapus Akun PPTP VPN
 cd
-wget https://raw.githubusercontent.com/ibnufachrizal/sshinjector/master/config/userdeletepptp
+wget https://raw.githubusercontent.com/rasta-team/MyVPS/master/config/userdeletepptp
 mv ./userdeletepptp /usr/bin/userdeletepptp
 chmod +x /usr/bin/userdeletepptp
 
 # instal Lihat Detail Akun PPTP VPN
 cd
-wget https://raw.githubusercontent.com/ibnufachrizal/sshinjector/master/config/detailpptp
+wget https://raw.githubusercontent.com/rasta-team/MyVPS/master/config/detailpptp
 mv ./detailpptp /usr/bin/detailpptp
 chmod +x /usr/bin/detailpptp
 
 # instal Cek login PPTP VPN
 cd
-wget https://raw.githubusercontent.com/ibnufachrizal/sshinjector/master/config/userloginpptp
+wget https://raw.githubusercontent.com/rasta-team/MyVPS/master/config/userloginpptp
 mv ./userloginpptp /usr/bin/userloginpptp
 chmod +x /usr/bin/userloginpptp
 
 # instal Lihat Daftar User PPTP VPN
 cd
-wget https://raw.githubusercontent.com/ibnufachrizal/sshinjector/master/config/alluserpptp
+wget https://raw.githubusercontent.com/rasta-team/MyVPS/master/config/alluserpptp
 mv ./alluserpptp /usr/bin/alluserpptp
 chmod +x /usr/bin/alluserpptp
 
 # instal Set Auto Reboot
 cd
-wget https://raw.githubusercontent.com/ibnufachrizal/sshinjector/master/config/autoreboot
+wget https://raw.githubusercontent.com/rasta-team/MyVPS/master/config/autoreboot
 mv ./autoreboot /usr/bin/autoreboot
 chmod +x /usr/bin/autoreboot
 
 # Install SPEED tES
 apt-get install python
-wget https://raw.githubusercontent.com/ibnufachrizal/sshinjector/master/config/speedtest.py
+wget https://raw.githubusercontent.com/rasta-team/MyVPS/master/config/speedtest.py
 chmod +x speedtest.py
 
 # instal autolimitscript
 cd
-wget https://raw.githubusercontent.com/ibnufachrizal/sshinjector/master/config/auto-limit-script
+wget https://raw.githubusercontent.com/rasta-team/MyVPS/master/config/auto-limit-script
 mv ./auto-limit-script /usr/bin/auto-limit-script
 chmod +x /usr/bin/auto-limit-script
 
 # instal userdelete
 cd
-wget https://raw.githubusercontent.com/ibnufachrizal/sshinjector/master/config/userdelete
+wget https://raw.githubusercontent.com/rasta-team/MyVPS/master/config/userdelete
 mv ./userdelete /usr/bin/userdelete
 chmod +x /usr/bin/userdelete
 
 # Install Menu
 cd
-wget https://raw.githubusercontent.com/ibnufachrizal/sshinjector/master/menu
+wget https://raw.githubusercontent.com/rasta-team/MyVPS/master/menu
 mv ./menu /usr/local/bin/menu
 chmod +x /usr/local/bin/menu
 
 # download script
 cd
-wget -O user-expired.sh "https://raw.githubusercontent.com/ForNesiaFreak/FNS_Debian7/fornesia.com/freak/user-expired.sh"
-wget -O /etc/issue.net "https://raw.githubusercontent.com/ibnufachrizal/sshinjector/master/config/banner"
+wget -O user-expired.sh "https://raw.githubusercontent.com/rasta-team/MyVPS-3/master/freak/user-expired.sh"
+wget -O /etc/issue.net "https://raw.githubusercontent.com/rasta-team/MyVPS/master/config/banner"
 echo "0 0 * * * root /root/user-expired.sh" > /etc/cron.d/user-expired
 echo "0 0 * * * root /sbin/reboot" > /etc/cron.d/reboot
 echo "* * * * * service dropbear restart" > /etc/cron.d/dropbear
@@ -459,7 +459,7 @@ service webmin restart
 
 # info
 clear
-echo "Setup by Ibnu Fachrizal"  | tee -a log-install.txt
+echo "Setup by Rasta-Team (Abe Pang)"  | tee -a log-install.txt
 echo "OpenVPN  : TCP 1194 (client config : http://$MYIP:81/client.ovpn)"  | tee -a log-install.txt
 echo "OpenSSH  : 22, 143"  | tee -a log-install.txt
 echo "Dropbear : 80, 109, 110, 443"  | tee -a log-install.txt
