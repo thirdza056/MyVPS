@@ -43,8 +43,6 @@ then
    echo  "Maaf, hanya IP @ Password yang terdaftar sahaja boleh menggunakan script ini!
 Hubungi: ABE PANG (+0169872312) Telegram : @myvpn007"
 
-done
-
 echo
 
 function create_user() {
