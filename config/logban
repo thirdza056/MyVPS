@@ -1,14 +1,15 @@
             #!/bin/bash
-            # Created by http://www.sshinjector.net
+            # Created by rasta-team.net
+            
             red='\e[1;31m'
             green='\e[0;32m'
             NC='\e[0m'
-            echo "Connecting to sshinjector.net..."
-            sleep 0.1
-            echo "Checking Permision..."
+            echo "Connecting to rasta-team.net..."
             sleep 0.2
+            echo "Checking Permision..."
+            sleep 0.3
             echo -e "${green}Permission Accepted...${NC}"
-            sleep 0.5
+            sleep 1
             echo""
 
             echo "===============================================";
@@ -25,5 +26,5 @@
             fi
             echo " ";
             echo "===============================================";
-            echo "Script Created by http://sshinjector.net";
-            echo "Terimakasih sudah berlanggan di sshinjector.net";
+            echo "Script Created by rasta-team.net";
+            echo "Terima kasih sudah berlanggan di rasta-team.net";
