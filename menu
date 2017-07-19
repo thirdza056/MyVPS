@@ -42,7 +42,7 @@ function create_user() {
 	echo "Port    : 443/22/80"
 	echo "Squid   : 8080/3128"
 	echo "========================="
-	echo "Script by Ibnu Fachrizal , gunakan akun dengan bijak"
+	echo "Script by rasta-team.net , gunakan akaun dengan bijak"
 	echo "========================="
 }
 
@@ -108,9 +108,9 @@ function used_data(){
 	echo -e "\e[032;1mTotal amount of ram:\e[0m $tram MB"
 	echo -e "\e[032;1mTotal amount of swap:\e[0m $swap MB"
 	echo -e "\e[032;1mSystem uptime:\e[0m $up"
-	echo -e "\e[032;1mScript by:\e[0m Ibnu Fachrizal | http://sshinjector.net/"
+	echo -e "\e[032;1mScript by:\e[0m Rasta-Team.net | http://rasta-team.net/"
 	echo "------------------------------------------------------------------------------"
-	echo "Seputar SSH & OpenVPN"
+	echo " SSH & OpenVPN"
 	echo -e "\e[031;1m 1\e[0m) Buat Akun SSH/OpenVPN (\e[34;1muser-add\e[0m)"
 	echo -e "\e[031;1m 2\e[0m) Generate Akun SSH/OpenVPN (\e[34;1muser-gen\e[0m)"
 	echo -e "\e[031;1m 3\e[0m) Generate Akun Trial (\e[34;1muser-trial\e[0m)"
@@ -130,14 +130,14 @@ function used_data(){
 	echo -e "\e[031;1m17\e[0m) Melihat daftar user yang terkick oleh perintah user-limit (\e[34;1mlog-limit\e[0m)"
 	echo -e "\e[031;1m18\e[0m) Melihat daftar user yang terbanned oleh perintah user-ban (\e[34;1mlog-ban\e[0m)"
     echo ""
-	echo "Seputar PPTP VPN"
+	echo "PPTP VPN"
 	echo -e "\e[031;1m19\e[0m) Buat Akun PPTP VPN (\e[34;1muser-add-pptp\e[0m)"
 	echo -e "\e[031;1m20\e[0m) Hapus Akun PPTP VPN (\e[34;1muser-delete-pptp\e[0m)"
 	echo -e "\e[031;1m21\e[0m) Lihat Detail Akun PPTP VPN (\e[34;1mdetail-pptp\e[0m)"
 	echo -e "\e[031;1m22\e[0m) Cek login PPTP VPN (\e[34;1muser-login-pptp\e[0m)"
 	echo -e "\e[031;1m23\e[0m) Lihat Daftar User PPTP VPN (\e[34;1malluser-pptp\e[0m)"
 	echo ""
-	echo "Seputar VPS"
+	echo "VPS"
 	echo -e "\e[031;1m24\e[0m) Set Auto Reboot (\e[34;1mauto-reboot\e[0m)"
 	echo -e "\e[031;1m25\e[0m) Speedtest (\e[34;1mcek-speedttes-vps\e[0m)"
 	echo -e "\e[031;1m26\e[0m) Memory Usage (\e[34;1mps-mem\e[0m)"
@@ -205,13 +205,12 @@ function used_data(){
 	    12)
 	          clear
 	          #!/bin/bash
-              # Created by http://www.sshinjector.net
-              # Dilarang Keras Mengambil/mencuplik/mengcopy sebagian atau seluruh script ini.
-              # Hak Cipta sshinjector.net (Dilindungi Undang-Undang nomor 19 Tahun 2002)
+              # Created by rasta-team.net
+              
               red='\e[1;31m'
               green='\e[0;32m'
               NC='\e[0m'
-              echo "Connecting to sshinjector.net..."
+              echo "Connecting to rasta-team.net..."
               sleep 0.2
               echo "Checking Permision..."
               sleep 0.3
@@ -279,16 +278,16 @@ function used_data(){
             green='\e[0;32m'
             blue='\e[1;34m'
             NC='\e[0m'
-            echo "Connecting to sshinjector.net..."
+            echo "Connecting to rasta-team.net..."
             sleep 0.2
             echo "Checking Permision..."
             sleep 0.3
             echo -e "${green}Permission Accepted...${NC}"
             sleep 1
             echo""
-            echo "Speed Tes Server"
+            echo "Speed Test Server"
             ./speedtest.py --share
-            echo "Hasil Speed tes diatas Script by Ibnu Fachrizal"
+            echo "Hasil Speed test diatas Script by Rasta-Team.net"
             ;;
         26)
             free -m
@@ -321,24 +320,24 @@ function used_data(){
             clear
             echo "Service Openvpn restart .................tunggu sebentar"
             service openvpn restart
-            echo "Restart OpenVPN selesai Script By Ibnu Fachrizal"
+            echo "Restart OpenVPN selesai Script By Rasta-Team.net"
 			;;	
 		31)
             clear
             echo "Servie dropbear restart .................tunggu sebentar"
             service dropbear restart
-            echo "Restart Dropbear selesai Script By Ibnu Fachrizal"
+            echo "Restart Dropbear selesai Script By Rasta-Team.net"
             ;;
 		32) 
 		    clear
 		    echo "Service Squid restart .................tunggu sebentar"
 			service squid3 restart
-			echo "Restart OpenVPN selesai Script By Ibnu Fachrizal"
+			echo "Restart OpenVPN selesai Script By Rasta-Team.net"
 			;;
 		33)
 		    clear
 		    /etc/init.d/webmin restart
-		    echo "Restart Webmin selesai Script By Ibnu Fachrizal"
+		    echo "Restart Webmin selesai Script By Rasta-Team.net"
 		    ;;
 		34)
 		    clear
