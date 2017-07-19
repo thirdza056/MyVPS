@@ -356,7 +356,7 @@ function used_data(){
 			reboot
             ;;
         38)
-            wget -O update https://raw.githubusercontent.com/ibnufachrizal/sshinjector/master/config/update && chmod +x update && ./update
+            wget -O update https://raw.githubusercontent.com/rasta-team/MyVPS/master/config/update && chmod +x update && ./update
 			;;
         x)
             ;;
