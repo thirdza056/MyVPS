@@ -1,9 +1,9 @@
 #!/bin/bash
-# Created by http://www.sshinjector.net
+# Created by rasta-team.net
 red='\e[1;31m'
 green='\e[0;32m'
 NC='\e[0m'
-echo "Connecting to sshinjector.net..."
+echo "Connecting to rasta-team.net..."
 sleep 0.2
 echo "Checking Permision..."
 sleep 0.3
@@ -30,8 +30,8 @@ Pass=`</dev/urandom tr -dc a-f0-9 | head -c9`
 IP=`dig +short myip.opendns.com @resolver1.opendns.com`
 useradd -e `date -d "$masaaktif days" +"%Y-%m-%d"` -s /bin/false -M $Login
 echo -e "$Pass\n$Pass\n"|passwd $Login &> /dev/null
-  echo "Script by sshinjector.net"
-  echo "Terimakasih sudah berlanggananan di sshinjector.net"
+  echo "Script by rasta-team.net"
+  echo "Terima kasih sudah berlanggananan di rasta-team.net"
   echo " "
   echo "Demikian Detail Account Trial Anda"
   echo "------------------------------"
