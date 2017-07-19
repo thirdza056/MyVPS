@@ -2,12 +2,26 @@
 myip=`ifconfig | grep -Eo 'inet (addr:)?([0-9]*\.){3}[0-9]*' | grep -Eo '([0-9]*\.){3}[0-9]*' | grep -v '127.0.0' | head -n1`;
 myint=`ifconfig | grep -B1 "inet addr:$myip" | head -n1 | awk '{print $1}'`;
 
+ red='\e[1;31m'
+               green='\e[0;32m'
+               NC='\e[0m'
+			   
+               echo "Connecting to rasta-server.net..."
+               sleep 0.5
+               
+			   echo "Checking Permision..."
+               sleep 0.5
+               
+			   echo -e "${green}Permission Accepted...${NC}"
+               sleep 1
+			   
+              
+myip='tester';
 flag=0
-
+	
 #iplist="ip.txt"
 
-#wget --quiet -O iplist.txt https://raw.githubusercontent.com/rasta-team/MyVPS/master/ip.txt
-wget --quiet -O iplist.txt https://drive.google.com/file/d/0B4Z-IY450xExLWpsZG9sNzlwcFE/view?usp=sharing
+wget --quiet -O iplist.txt https://raw.githubusercontent.com/rasta-team/MyVPS/master/ip.txt
 
 #if [ -f iplist ]
 #then
@@ -19,17 +33,19 @@ lines=`cat $iplist`
 
 for line in $lines; do
 #        echo "$line"
-        if [ "$line" = "$myip" ]
+        if [ "$line" = "$myip" ];
         then
                 flag=1
         fi
 
 done
 
+rm -f /root/iplist.txt
+
 
 if [ $flag -eq 0 ]
 then
-   echo  "Maaf, hanya IP yang terdaftar sahaja boleh menggunakan script ini!
+   echo  "Maaf, hanya IP @ Password yang terdaftar sahaja boleh menggunakan script ini!
 Hubungi: ABE PANG (+0169872312) Telegram : @myvpn007"
 
 rm -f /root/iplist.txt
