@@ -1,11 +1,11 @@
                #!/bin/bash
-               # Created by http://www.sshinjector.net
+               # Created by rasta-team.net
                # Uban User.
                red='\e[1;31m'
                green='\e[0;32m'
                blue='\e[1;34m'
                NC='\e[0m'
-               echo "Connecting to sshinjector.net..."
+               echo "Connecting to rasta-team.net..."
                sleep 0.2
                echo "Checking Permision..."
                sleep 0.3
@@ -20,8 +20,8 @@
                # proses mengganti passwordnya
                passwd -u $username
                echo""
-               echo "Script by sshinjector.net"
-               echo "Terimakasih sudah berlangganan di sshinjector.net"
+               echo "Script by rasta-team.net"
+               echo "Terima kasih sudah berlangganan di rasta-team.net"
                echo " "
                echo "-----------------------------------------------"
                echo -e "Username ${blue}$username${NC} Sudah berhasil di ${green}UNBAN${NC}."
