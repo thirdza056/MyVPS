@@ -1,9 +1,10 @@
             #!/bin/bash
+            # Created by rasta-team.net
+            
             red='\e[1;31m'
             green='\e[0;32m'
-            blue='\e[1;34m'
             NC='\e[0m'
-            echo "Connecting to sshinjector.net..."
+            echo "Connecting to rasta-team.net..."
             sleep 0.2
             echo "Checking Permision..."
             sleep 0.3
