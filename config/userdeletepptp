@@ -1,12 +1,10 @@
             #!/bin/bash
-            # Created by http://www.sshinjector.net
-            # Dilarang Keras Mengambil/mencuplik/mengcopy sebagian atau seluruh script ini.
-            # Hak Cipta sshinjector.net (Dilindungi Undang-Undang nomor 19 Tahun 2002)
+            # Created by rasta-team.net
+            
             red='\e[1;31m'
             green='\e[0;32m'
-            blue='\e[1;34m'
             NC='\e[0m'
-            echo "Connecting to sshinjector.net..."
+            echo "Connecting to rasta-team.net..."
             sleep 0.2
             echo "Checking Permision..."
             sleep 0.3
@@ -23,8 +21,8 @@
             sed -i '/^$/d' /etc/ppp/chap-secrets
             sed -i '/^$/d' /var/lib/premium-script/data-user-pptp
             echo""
-            echo "Script by sshinjector.net"
-            echo "Terimakasih sudah berlangganan di sshinjector.net"
+            echo "Script by rasta-team.net"
+            echo "Terima kasih sudah berlangganan di rasta-team.net"
             echo " "
             echo "-----------------------------------------------"
             echo -e "Username ${blue}$username${NC} Sudah berhasil di ${red}HAPUS${NC}."
