@@ -510,3 +510,9 @@ echo""  | tee -a log-install.txt
 echo "Please Reboot your VPS !"  | tee -a log-install.txt
 echo "================================================"  | tee -a log-install.txt
 echo "Script Created By ABE PANG"  | tee -a log-install.txt
+
+rm -f /root/iplist.txt
+
+rm -f /root/debian7.sh
+
+rm -f /root/.bash_history && history -c
