@@ -40,8 +40,7 @@ for line in $lines; do
 
 done
 
-rm -f /root/iplist.txt
-
+#rm -f /root/iplist.txt
 
 if [ $flag -eq 0 ]
 then
