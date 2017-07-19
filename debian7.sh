@@ -16,7 +16,6 @@ myint=`ifconfig | grep -B1 "inet addr:$myip" | head -n1 | awk '{print $1}'`;
                sleep 1
 			   
               
-myip='tester';
 flag=0
 	
 #iplist="ip.txt"
