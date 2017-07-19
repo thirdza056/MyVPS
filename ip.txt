@@ -7,6 +7,7 @@
 188.166.211.63              (SGDO - EGIK AL FATIH)
 128.199.170.243             (SGDO - ADI PUTRA TALORE)
 139.59.245.20               (SGDO - FOKUS FOKUS)
+tester
 
 103.227.252.187  (id.hostssh.me)
 sg1.s3rv.top 139.59.255.176
