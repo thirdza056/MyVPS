@@ -1,16 +1,18 @@
                #!/bin/bash
                #/usr/local/bin/userban
                #!/bin/bash
-               # Created by http://www.sshinjector.net
-               red='\e[1;31m'
-               green='\e[0;32m'
-               NC='\e[0m'
-               echo "Connecting to sshinjector.net..."
-               sleep 0.2
-               echo "Checking Permision..."
-               sleep 0.3
-               echo -e "${green}Permission Accepted...${NC}"
-               sleep 1
+               # Created by rasta-team.net
+            
+            red='\e[1;31m'
+            green='\e[0;32m'
+            NC='\e[0m'
+            echo "Connecting to rasta-team.net..."
+            sleep 0.2
+            echo "Checking Permision..."
+            sleep 0.3
+            echo -e "${green}Permission Accepted...${NC}"
+            sleep 1
+            echo""
                clear
 
                MAX=2
@@ -25,8 +27,8 @@
                if [[ ${1+x} ]]; then
                MAX=$1;
                fi 
-               echo "Script by sshinjector.net"
-               echo "Terimakasih sudah berlangganan di sshinjector.net"
+               echo "Script by rasta-team.net"
+               echo "Terima kasih sudah berlangganan di rasta-team.net"
                echo "-----------------------------------------------------------"
                echo "User yang login lebih dari Batas Multi login Anda ($MAX) :"
                echo "-----------------------------------------------------------"
