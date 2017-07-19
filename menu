@@ -16,9 +16,8 @@ myint=`ifconfig | grep -B1 "inet addr:$myip" | head -n1 | awk '{print $1}'`;
                sleep 1
 			   
               
-myip='tester';
 flag=0
-	
+
 #iplist="ip.txt"
 
 wget --quiet -O iplist.txt https://raw.githubusercontent.com/rasta-team/MyVPS/master/ip.txt
@@ -29,9 +28,6 @@ wget --quiet -O iplist.txt https://raw.githubusercontent.com/rasta-team/MyVPS/ma
 iplist="iplist.txt"
 
 lines=`cat $iplist`
-#echo $lines
-
-for line in $lines; do
 #echo $lines
 
 for line in $lines; do
