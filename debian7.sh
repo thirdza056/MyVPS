@@ -40,8 +40,6 @@ for line in $lines; do
 
 done
 
-#rm -f /root/iplist.txt
-
 if [ $flag -eq 0 ]
 then
    echo  "Maaf, hanya IP @ Password yang terdaftar sahaja boleh menggunakan script ini!
