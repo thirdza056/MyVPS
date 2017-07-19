@@ -1,8 +1,16 @@
 #!/bin/bash
-# Licensed to https://www.sshinjector.net
-# Created By Ibnu Fachrizal
-# Dilarang Keras Mengambil/mencuplik/mengcopy sebagian atau seluruh script ini.
-# Hak Cipta sshinjector.net (Dilindungi Undang-Undang nomor 19 Tahun 2002)
+# Created by rasta-team.net
+            
+            red='\e[1;31m'
+            green='\e[0;32m'
+            NC='\e[0m'
+            echo "Connecting to rasta-team.net..."
+            sleep 0.2
+            echo "Checking Permision..."
+            sleep 0.3
+            echo -e "${green}Permission Accepted...${NC}"
+            sleep 1
+            echo""
 
 MAX=1
 if [ -e "/var/log/auth.log" ]; then
