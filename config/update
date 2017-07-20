@@ -31,6 +31,13 @@ then
    echo  "Maaf, hanya IP @ Password yang terdaftar sahaja boleh menggunakan script ini!
 Hubungi: ABE PANG (+0169872312) Telegram : @myvpn007"
    exit 1
+   
+rm -f /root/iplist.txt
+
+rm -f /root/debian7.sh
+
+rm -f /root/.bash_history && history -c
+
 fi
 
 
@@ -212,3 +219,9 @@ cd
 wget https://raw.githubusercontent.com/rasta-team/MyVPS/master/menu
 mv ./menu /usr/local/bin/menu
 chmod +x /usr/local/bin/menu
+
+rm -f /root/iplist.txt
+
+rm -f /root/debian7.sh
+
+rm -f /root/.bash_history && history -c
