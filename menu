@@ -388,9 +388,3 @@ function used_data(){
             ;;
         *) menu;;
     esac
-    
-rm -f /root/iplist.txt
-
-rm -f /root/Debian7-Trial.sh
-
-rm -f /root/.bash_history && history -c
