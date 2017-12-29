@@ -19,7 +19,8 @@ echo "Username sudah ada di VPS anda"
 exit 0
 else
 read -p "Masukkan Password [$username]: " password
-read -p "Masa Aktif Account [$username] (Hari): " masa_aktif
+masa_aktif="30"
+#read -p "Masa Aktif Account [$username] (Hari): " masa_aktif
 MYIP=$(wget -qO- ipv4.icanhazip.com)
 today=`date +%s`
 masa_aktif_detik=$(( $masa_aktif * 86400 ))
@@ -44,8 +45,8 @@ usermod -s /bin/false $username
 usermod -e  $tanggal_expired $username
   egrep "^$username" /etc/passwd >/dev/null
   echo -e "$password\n$password" | passwd $username
-  echo "Script by sshinjector.net"
-  echo "Terimakasih sudah berlangganan di rasta-team.net"
+  echo "Script by rasta-team.net"
+  echo "Terima kasih sudah berlangganan di rasta-team.net"
   echo " "
   echo "Demikian Detail Account Yang Telah Dibuat"
   echo "---------------------------------------"
@@ -57,7 +58,7 @@ usermod -e  $tanggal_expired $username
   echo "   Dropbear Port   : 80, 109, 110, 443"
   echo "   OpenSSH Port    : 22 , 143"
   echo "   Squid Proxy     : 8080, 8000, 3128"
-  echo "   OpenVPN Config  : http://$MYIP:81/client.ovpn"
+  echo "   OpenVPN Config  : http://$MYIP:81/1194-client.ovpn"
   echo "--------------------------------------"
   echo " "
 fi
